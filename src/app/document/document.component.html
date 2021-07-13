@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-header class="card__header">
+    <mat-chip-list>
+      <mat-chip
+        tagTheme
+        [document]="document"
+        [value]="document.type"
+        (click)="onTagClick(document.type)"
+      >
+        {{ document.type }}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ document.name }}</p>
+  </mat-card-content>
+</mat-card>

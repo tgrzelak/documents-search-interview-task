@@ -1,0 +1,37 @@
+@import "variables";
+
+.card {
+  position: relative;
+  height: 80px;
+  &__header {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+}
+
+.mat-card {
+  border-radius: 15px;
+  margin-bottom: 15px;
+  @media (min-width: $mobile-breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+.mat-standard-chip {
+  min-height: 16px;
+}
+
+.mat-chip {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.mat-card-content {
+  position: absolute;
+  left: 35px;
+  bottom: 35px;
+  p {
+    font-weight: bold;
+  }
+}

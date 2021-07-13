@@ -1,0 +1,12 @@
+<nav class="container">
+  <ul class="categories">
+    <li
+      *ngFor="let category of categories | documentTypeToArray"
+      class="category"
+      [ngClass]="{ active: active === category }"
+      (click)="onCategoryClick(category)"
+    >
+      {{ category }}
+    </li>
+  </ul>
+</nav>

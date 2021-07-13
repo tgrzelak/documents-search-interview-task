@@ -1,0 +1,33 @@
+@import "variables";
+
+.main {
+  .navigation {
+    width: 100%;
+  }
+  .documents {
+    width: 100%;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  .main {
+    display: flex;
+    margin-right: 40px;
+    .navigation {
+      width: 20%;
+    }
+    .documents {
+      &__container {
+        display: grid;
+        --n: 4;
+        --g: 15px;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(max(200px, (100% - (var(--n) - 1) * var(--g)) / var(--n)), 1fr)
+        );
+        justify-items: stretch;
+        grid-gap: var(--g);
+      }
+    }
+  }
+}

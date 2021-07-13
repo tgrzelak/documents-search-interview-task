@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import "~@angular/material/theming";
+@import "colors";
+
+body {
+  background-color: $page-background-color;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 15px;
+}
+
+$config: mat-typography-config(
+  $font-family: "Open Sans, sans-serif",
+);
+
+@include mat-core($config);

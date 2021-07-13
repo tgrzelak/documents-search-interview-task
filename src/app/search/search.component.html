@@ -1,0 +1,16 @@
+<input
+  class="search-input"
+  type="text"
+  placeholder="Start typing document name..."
+  [(ngModel)]="pattern"
+  (ngModelChange)="onPatternChange(pattern)"
+  [matAutocomplete]="auto"
+/>
+<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+  <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+    {{ option.name }}
+    <mat-chip tagTheme [document]="option">
+      {{ option.type }}
+    </mat-chip>
+  </mat-option>
+</mat-autocomplete>
